@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklad</title>
+    <link rel="stylesheet" href="sklad.css">
+    <script src="sklad.js"></script>
+</head>
+<body>
+    <h2>Skladová Aplikace</h2>
+
+    <table id="produktyTable">
+        <tr>
+            <th>Název</th>
+            <th>Cena za kus</th>
+            <th>Množství na skladě</th>
+        </tr>
+    </table>
+
+    <h2>Filtr</h2>
+    <label for="mnozstviFilter">Zobrazit produkty s množstvím méně než:</label>
+    <input type="number" id="mnozstviFilter">
+    <button onclick="filtrujProdukty()">Filtruj</button>
+
+    <h2>Nejdražší Produkt</h2>
+    <button onclick="najdiNejdrahsiProdukt()">Najdi nejdražší produkt</button>
+
+    <h2>Celková Hodnota Zásob</h2>
+    <button onclick="spocitejCelkovouHodnotu()">Spočítej celkovou hodnotu</button>
+    
+    <h2>Aktualizace Počtu Produktů</h2>
+    <form id="aktualizaceForm">
+        <label for="nazevProduktu">Název produktu:</label>
+        <input type="text" id="nazevProduktu">
+        <label for="aktualizaceMnozstvi">Nové množství:</label>
+        <input type="number" id="aktualizaceMnozstvi">
+        <button type="button" onclick="aktualizujMnozstvi()">Aktualizuj množství</button>
+    </form>
+</body>
+</html>
